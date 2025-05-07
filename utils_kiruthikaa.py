@@ -1,19 +1,14 @@
 """
-File: utils_case.py
+File: utils_kiruthikaa.py
+Module Name: supplier_performance_tracker
+Purpose: Reusable Module for supplier performance metrics Project. 
 
-Purpose: Reusable Module for My Analytics Projects
+Description: This module helps analyze key supplier performance metrics 
+to assess reliability and efficiency in supply chain management.
 
-Description: This module provides a byline for my analytics projects. 
-When we work hard to write useful code, we want it to be reusable.
-A good byline could be used in every Python analytics project we do.
-
-Author: Denise Case
-
-TODO: Change the module name in this opening docstring to use your name instead of case. 
-TODO: Change the author in this opening docstring to your name or alias. 
-TODO: Remove these TODOS after you have completed them.
+Author: Kiruthikaa NS
 """
-
+    
 #####################################
 # Import Modules
 #####################################
@@ -29,47 +24,56 @@ import statistics
 #####################################
 
 # declare a boolean variable (has a value True or False)
-# TODO: Add another or replace this with your own boolean variable
-has_international_clients: bool = True
+# Boolean variable indicating whether suppliers meet delivery deadlines
+suppliers_meet_deadlines: bool = True
 
 # declare an integer variable 
-# TODO: Add or replace this with your own integer variable
-years_in_operation: int = 10
+# Integer for total suppliers being analyzed
+total_suppliers: int = 15
+
+# Function to check if the number of suppliers is even or odd
+def is_even(number: int) -> bool:
+    return number % 2 == 0
+# Print whether the total supplier count is even or odd
+print(f"Is the number of suppliers even? {is_even(total_suppliers)}")
 
 # declare a floating point variable
-# TODO: Add or replace this with your own floating point variable
-average_client_satisfaction: float = 4.7
+# Floating-point variable for average supplier defect rate (percentage)
+average_defect_rate: float = 2.3
 
 # declare a list of strings
-# TODO: Add or replace this with your own list  
-skills_offered: list = ["Data Analysis", "Machine Learning", "Business Intelligence"]
+# Declare a list of supplier names
+supplier_names: list = ["ABC Logistics", "Global Freight Co.", "Swift Supply Chain", "Evergreen Distribution", "NextGen Transport"]
 
-# declare a list of numbers so we can illustrate statistics skills
-# TODO: Add or replace this with your own numeric list  
-client_satisfaction_scores: list = [4.8, 4.6, 4.9, 5.0, 4.7]
+# declare a list of numbers so we can illustrate statistics skills 
+# List of delivery times in days for different suppliers
+supplier_delivery_times: list = [2, 3, 5, 4, 2, 7, 3] 
+
+# List of supplier reliability scores (scale of 1 to 5)
+supplier_reliability_scores: list = [4.8, 3.9, 4.5, 4.2, 4.7] 
 
 # Calculate basic statistics using built-in Python functions and the statistics module
-# TODO: Replace these variable names with the variable name of your own numeric list
-min_score: float = min(client_satisfaction_scores)  
-max_score: float = max(client_satisfaction_scores)  
-mean_score: float = statistics.mean(client_satisfaction_scores)  
-stdev_score: float = statistics.stdev(client_satisfaction_scores)
+# Calculate basic statistics on delivery time variability
+min_delivery_time: int = min(supplier_delivery_times)  
+max_delivery_time: int = max(supplier_delivery_times)  
+mean_delivery_time: float = statistics.mean(supplier_delivery_times)  
+stdev_delivery_time: float = statistics.stdev(supplier_delivery_times) 
 
 # Use a Python formatted string (f-string) to show information
-# TODO: Modify the text in the byline to fit your information
-# TODO: Modify the variables in the byline to use your variable names
 byline: str = f"""
 ---------------------------------------------------------
-Stellar Analytics: Delivering Professional Insights
+Supplier Performance Analytics
 ---------------------------------------------------------
-Has International Clients:  {has_international_clients}
-Years in Operation:         {years_in_operation}
-Skills Offered:             {skills_offered}
-Client Satisfaction Scores: {client_satisfaction_scores}
-Minimum Satisfaction Score: {min_score}
-Maximum Satisfaction Score: {max_score}
-Mean Satisfaction Score: {mean_score:.2f}
-Standard Deviation of Satisfaction Scores: {stdev_score:.2f}
+Total Suppliers:            {total_suppliers}
+Suppliers Meet Deadlines:   {suppliers_meet_deadlines}
+Average Defect Rate:        {average_defect_rate}%
+Supplier Names:             {", ".join(supplier_names)}
+Supplier Reliability Scores:{supplier_reliability_scores}
+Delivery Times (days):      {supplier_delivery_times}
+Minimum Delivery Time:      {min_delivery_time}
+Maximum Delivery Time:      {max_delivery_time}
+Mean Delivery Time:         {mean_delivery_time:.2f}
+Standard Deviation:         {stdev_delivery_time:.2f}
 """
 
 #####################################
@@ -110,9 +114,9 @@ def main() -> None:
     Everything after the colon must be indented consistently (usually 4 spaces)
     '''
 
-    print("START main() in utils_case.py")
+    print("START main() in utils_kiruthikaa.py")
     print(get_byline())
-    print("END main() in utils_case.py")
+    print("END main() in utils_kiruthikaa.py")
 
 #####################################
 # Conditional Execution
