@@ -150,10 +150,10 @@ git push origin main
 - Open issues or submit pull requests to enhance supplier tracking capabilities.  
 - Contributions should follow best practices, including detailed commit messages.  
 
-### Acknowledgements
-Special Thanks To:
-Dr.Case for her guidance and support
-Open Source Contributors for essential license and tools. 
+## Acknowledgements
+Special Thanks To: 
+- Dr.Case for her guidance and support
+- Open Source Contributors for essential license and tools. 
 ---
 
 
